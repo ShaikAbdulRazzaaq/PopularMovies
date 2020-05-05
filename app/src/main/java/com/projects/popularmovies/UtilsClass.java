@@ -5,12 +5,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-public class UtilsClass {
+class UtilsClass {
 
         private boolean connected;
         private static UtilsClass instance;
 
-        public static UtilsClass getInstance() {
+        static UtilsClass getInstance() {
             if (null != instance) {
                 return instance;
             } else {
@@ -22,7 +22,7 @@ public class UtilsClass {
         private UtilsClass() {
         }
 
-        public boolean isNetworkAvailable(Context context) {
+        boolean isNetworkAvailable(Context context) {
             try {
                 ConnectivityManager connectivityManager = (ConnectivityManager) context
                         .getSystemService(Context.CONNECTIVITY_SERVICE);
