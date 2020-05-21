@@ -94,7 +94,7 @@ public class Result implements Parcelable {
         this.overview = overview;
     }
 
-    public String getReleaseDate() {
+    String getReleaseDate() {
         return releaseDate;
     }
 
@@ -126,7 +126,7 @@ public class Result implements Parcelable {
         this.originalTitle = originalTitle;
     }
 
-    public String getOriginalLanguage() {
+    String getOriginalLanguage() {
         return originalLanguage;
     }
 
@@ -134,7 +134,7 @@ public class Result implements Parcelable {
         this.originalLanguage = originalLanguage;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
@@ -174,7 +174,7 @@ public class Result implements Parcelable {
         this.video = video;
     }
 
-    public Double getVoteAverage() {
+    Double getVoteAverage() {
         return voteAverage;
     }
 

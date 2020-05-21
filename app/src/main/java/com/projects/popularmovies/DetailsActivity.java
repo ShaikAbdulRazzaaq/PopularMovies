@@ -1,5 +1,6 @@
 package com.projects.popularmovies;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -8,6 +9,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
     private TextView TitleDetailActivity;
@@ -18,6 +22,7 @@ public class DetailsActivity extends AppCompatActivity {
     private ImageView thumbnailDetailActivity;
     private static final String PosterUrl = "https://image.tmdb.org/t/p/w500";
     private static final String TAG = "DetailsActivity";
+    List<Result> list=new ArrayList<>();
 
 
     @Override
