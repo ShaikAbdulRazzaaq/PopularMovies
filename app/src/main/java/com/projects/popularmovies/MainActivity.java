@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Popular movies api", getDataFromMovieDB.getPopularMovies(API_KEY, getResources().getString(R.string.LANGUAGE), 1).request().url().toString());
             call.enqueue(new Callback<MainModelClass>() {
                 @Override
-                public void onResponse(Call<MainModelClass> call, Response<MainModelClass> response) {
+                public void onResponse(@NonNull Call<MainModelClass>  call, @NonNull Response<MainModelClass> response) {
                     if (response.isSuccessful()) {
                         progressBar.setVisibility(View.INVISIBLE);
                         moviesData = Objects.requireNonNull(response.body()).getResults();
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 @Override
-                public void onFailure(Call<MainModelClass> call, Throwable t) {
+                public void onFailure(@NonNull Call<MainModelClass> call,@NonNull Throwable t) {
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
                 }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Popular movies api", getDataFromMovieDB.getTopRatedMovies(API_KEY, getResources().getString(R.string.LANGUAGE), 1).request().url().toString());
             call.enqueue(new Callback<MainModelClass>() {
                 @Override
-                public void onResponse(Call<MainModelClass> call, Response<MainModelClass> response) {
+                public void onResponse(@NonNull Call<MainModelClass> call, @NonNull Response<MainModelClass> response) {
                     if (response.isSuccessful()) {
                         progressBar.setVisibility(View.INVISIBLE);
                         moviesData = Objects.requireNonNull(response.body()).getResults();
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 @Override
-                public void onFailure(Call<MainModelClass> call, Throwable t) {
+                public void onFailure(@NonNull Call<MainModelClass> call, @NonNull Throwable t) {
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
                 }
